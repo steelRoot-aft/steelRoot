@@ -1,0 +1,133 @@
+.container {
+  display: grid;
+  grid-template: 1fr / 1fr minmax(auto, 1170px) 1fr;
+  padding: 60px 15px;
+}
+
+.body {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+  gap: 30px;
+}
+
+.left {}
+
+.form {
+  display: grid;
+  grid-template: repeat(3, 55px) 140px 55px / 1fr;
+  gap: 20px;
+}
+
+.form input {
+  padding: 0 24px;
+}
+
+.form textarea {
+  padding: 16px 24px;
+  resize: none;
+}
+
+.form input, 
+.form textarea {
+  border: 1.40px solid var(--primary-black);
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: var(--zinc-500);
+}
+
+.form input:focus,
+.form textarea:focus {
+  box-shadow: 0 0 5px var(--primary-black);
+}
+
+.form button {
+  background: var(--primary-black);
+  color: var(--primary-white);
+  max-width: 175px;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.form button:hover {
+  background: var(--zinc-500);
+}
+
+
+.right {
+  padding: 55px 0 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.right h2 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.right h2 span {
+  color: var(--primary-white);
+    font-weight: 800;
+    position: relative;
+    text-shadow:
+      -2px -2px 0 black,
+      2px -2px 0 black,
+      -2px 2px 0 black,
+      2px 2px 0 black;
+}
+
+.right p {
+  padding: 30px 0 50px 0;
+  line-height: 150%;
+    letter-spacing: 0.02em;
+    color: var(--zinc-500);
+}
+
+.buttons {
+  display: grid;
+  grid-template: 56px / 56px 80px 56px;
+  gap: 10px;
+}
+
+.buttons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--primary-black);
+  border-radius: 4px;
+  font-size: 1.5rem;
+  color: var(--primary-black);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.buttons a:hover {
+  color: var(--primary-white);
+  background: var(--primary-black);
+}
+
+
+@media (max-width: 767px) {
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .body {
+    grid-template: auto 1fr / minmax(auto,500px);
+    justify-content: center;
+    row-gap: 60px;
+  }
+  .left {
+    order: 2;
+  }
+  
+  .right {
+    text-align: center;
+    align-items: center;
+  }
+}

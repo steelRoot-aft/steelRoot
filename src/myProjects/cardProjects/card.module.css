@@ -1,0 +1,22 @@
+.body {
+  display: grid;
+  height: 100%;
+  background: var(--zinc-800);
+  border-radius: 14px;
+  border: 1px solid var(--zinc-500);
+  overflow: hidden;
+}
+
+.image {}
+
+.image img {
+  max-width: 100%;
+}
+
+.title {}
+
+.title h3 {
+  padding: 10px 0;
+  text-align: center;
+  color: var(--zinc-200);
+}

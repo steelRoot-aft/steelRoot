@@ -1,0 +1,88 @@
+.body {
+  display: grid;
+  grid-template: auto 1fr 50px / 1fr;
+  row-gap: 80px;
+  padding: 80px 15px;
+  color: var(--primary-white);
+  background: var(--primary-black);
+}
+
+.top {}
+
+.top h2 {
+  text-align: center;
+}
+
+.main {
+  display: grid;
+  grid-template: auto 1fr / 1fr;
+  row-gap: 40px;
+}
+
+.buttons {
+  display: grid;
+  grid-template: 40px / repeat(4, minmax(auto, 150px));
+  justify-content: center;
+  column-gap: 20px;
+}
+
+.buttons button {
+  background: var(--zinc-500);
+  border-radius: 5px;
+  color: var(--zinc-800);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.buttons button:hover {
+  background: var(--zinc-800);
+  color: var(--zinc-500);
+}
+
+.buttons button.active {
+  background: var(--zinc-800);
+  color: var(--zinc-500);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(auto,500px));
+  justify-content: center;
+  gap: 30px;
+}
+
+.block {
+  opacity: 1;
+  transition: all 0.3s linear 0s;
+}
+
+.block.hidden {
+  opacity: 0;
+}
+
+.bottom {}
+
+.more {
+  display: grid;
+  grid-template: 1fr / minmax(auto, 250px);
+  justify-content: center;
+}
+
+.more button {
+  border-radius: 10px;
+  background: var(--zinc-500);
+  transition: all 0.3s ease-in-out 0s;
+  color: var(--zinc-800);
+}
+
+.more button:hover {
+  background: var(--zinc-800);
+  color: var(--zinc-500);
+}
+
+@media (max-width: 520px) {
+  .buttons {
+  grid-template: repeat(2, 50px) / repeat(2, 1fr);
+  gap: 10px;
+  }
+
+}

@@ -1,0 +1,24 @@
+.container {
+  display: grid;
+  grid-template: 1fr / 1fr minmax(auto, 1170px) 1fr;
+  padding: 0 15px;
+}
+
+.body {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template: auto 1fr / 1fr;
+  row-gap: 80px;
+}
+
+.top {}
+
+.top h2 {
+  text-align: center;
+}
+
+.bottom {
+  display: grid;
+  grid-template: 1fr / minmax(auto,370px);
+  justify-content: center;
+}

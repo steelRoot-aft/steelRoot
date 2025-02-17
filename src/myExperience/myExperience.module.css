@@ -1,0 +1,32 @@
+.body {
+  display: grid;
+  grid-template: auto 1fr / 1fr;
+  row-gap: 40px;
+  background: var(--primary-black);
+  color: var(--primary-white);
+  padding: 100px 15px;
+}
+
+.top {
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.top h2 {}
+
+.bottom {
+  display: grid;
+  grid-template: 1fr / minmax(auto, 1000px);
+  justify-content: center;
+  row-gap: 30px;
+}
+
+.block:nth-child(even) {
+  background: var(--zinc-800);
+  border: 0px solid #000;
+}
+
+.block:nth-child(2) img {
+  height: 30px;
+}
+

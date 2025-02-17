@@ -1,0 +1,111 @@
+.body {
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 16px -6px rgba(24, 39, 75, 0.08), 0 6px 8px -6px rgba(24, 39, 75, 0.12);
+  background: var(--primary-white);
+  display: grid;
+  grid-template: 1fr 1fr auto auto / 1fr;
+  row-gap: 24px;
+  color: var(--primary-neutral);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+/* Иконка клиента */
+.icon {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.wrapper::before, .wrapper::after {
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.wrapper::before {
+  content: ' ';
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--primary-black);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.wrapper::after {
+  content: '❜❜';
+  font-size: 3rem;
+  color: var(--primary-white);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(-8%, 37%);
+}
+
+.icon img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* Текст Комментарий */
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text p {
+  text-align: center;
+}
+
+/* Имя клиента */
+.name {
+  display: flex;
+  justify-content: center;
+}
+
+.name h3 {
+  font-weight: 600;
+}
+
+/* Рейтинг */
+.raiting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--zinc-500);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.star {
+  font-size: 1.5rem;
+}
+
+.raiting p {
+  font-size: 1.5rem;
+  padding: 0 0 0 5px;
+}
+
+/* Hover Эффект */
+
+.body:hover {
+  box-shadow: 0 8px 16px -6px rgba(24, 39, 75, 0.08), 0 6px 8px -6px rgba(24, 39, 75, 0.12);
+  background: var(--primary-black);
+  color: var(--primary-white);
+}
+
+.body:hover .raiting {
+  color: var(--primary-white);
+}
+
+.body:hover .wrapper::before {
+  background: var(--primary-white);
+}
+
+.body:hover .wrapper::after {
+  color: var(--primary-black);
+}

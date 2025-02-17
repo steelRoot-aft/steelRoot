@@ -1,0 +1,32 @@
+.body {
+  display: grid;
+  grid-template: auto 1fr / 1fr;
+  row-gap: 40px;
+  padding: 0 15px;
+}
+
+.top {
+  text-align: center;
+  margin: 20px;
+}
+
+.top h2 {}
+
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(4, 186px);
+  justify-content: center;
+  gap: 30px;
+}
+
+@media (max-width: 767px) {
+  .bottom {
+    grid-template-columns: repeat(2, 186px);
+  }
+}
+
+@media (max-width: 424px) {
+  .bottom {
+    grid-template-columns: repeat(2, 130px);
+  }
+}

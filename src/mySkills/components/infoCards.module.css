@@ -1,0 +1,33 @@
+.body {
+  border: 2px solid var(--primary-black);
+  border-radius: 4px;
+  height: 186px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 30px;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.icon {
+  font-size: 4rem;
+}
+
+.body h4 {}
+
+.body:hover {
+  background: var(--primary-black);
+}
+
+.body:hover h4, 
+.body:hover .icon {
+  color: var(--primary-white);
+}
+
+@media (max-width: 424px) {
+  .body {
+    height: 130px;
+    row-gap: 10px;
+  }
+}
